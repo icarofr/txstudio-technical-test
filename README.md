@@ -1,8 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# LiqTrade - Technical Test for TXStudio
+
+LiqTrade is a financial services interface built as part of a technical test for TXStudio, showcasing responsive UI development and data visualization using Next.js and Tailwind CSS.
+
+## Project Overview
+
+This implementation focuses on pixel-perfect UI integration from provided designs. The project showcases:
+
+- Responsive layout for both mobile and desktop views
+- Modern UI components using Tailwind CSS and Headless UI
+- Interactive dashboard with financial charts and transaction tracking
+- Clean component structure with proper separation of concerns
 
 ## Getting Started
 
-First, run the development server:
+To run the development server:
 
 ```bash
 npm run dev
@@ -16,25 +27,57 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Technical Choices
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### TypeScript Considerations
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+For this integration test, TypeScript was primarily used for configuration files and some component definitions, while most UI components were built with JSX for rapid development. However, I want to emphasize that **full TypeScript integration is recommended** for production to ensure type safety, maintainability, and better developer experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Library Choices
 
-## Learn More
+- **Chart.js**: Used for financial data visualization
+- **@headlessui/react**: Accessible UI components that integrate with Tailwind
+- **@heroicons/react**: SVG icon library for consistent design language
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+```
+/src
+  /components
+    /common        - Reusable UI elements (Button, FeatureCard, etc.)
+    /dashboard     - Dashboard-specific components
+    /layout        - Layout components (Navbar)
+    /sections      - Page section components
+  /data           - Mock data for dashboard visualization
+  /pages          - Next.js page components
+  /styles         - Global styles
+  /utils          - Utility functions
+/public
+  /assets         - Static assets (images, logos)
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+- **Landing Page**: Showcasing LiqTrade's financial services
+- **Dashboard**: Interactive financial dashboard with:
+  - Transaction tracking and status
+  - Financial charts and visualizations
+  - Risk assessment tools
+  - Account management interface
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Future Improvements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Potential future improvements could include:
+- Complete TypeScript integration for all components
+- Unit and integration tests using Jest and React Testing Library
+- State management with React Context or Redux for more complex interactions
+- Internationalization support
+- Enhanced accessibility features
+
+## Deployment
+
+This project can be deployed on Vercel for optimal Next.js compatibility, or follow the [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for other hosting options.
+
+---
+
+Thank you for the opportunity to demonstrate my frontend development skills. I look forward to discussing this implementation further.
