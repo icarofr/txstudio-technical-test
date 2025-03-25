@@ -1,6 +1,6 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
+import Image from "next/image"
 
 export default function Navbar() {
     return (
@@ -22,7 +22,10 @@ export default function Navbar() {
                                 src="/assets/liqtrade-logo.png"
                                 width={150}
                                 height={50}
-                            />
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto"
+                                }} />
                         </div>
                         <div className="hidden md:ml-10 md:flex md:space-x-8">
                             <a
@@ -77,7 +80,6 @@ export default function Navbar() {
                     </div>
                 </div>
             </div>
-
             <DisclosurePanel className="md:hidden">
                 <div className="space-y-1 pt-2 pb-3">
                     <DisclosureButton
@@ -134,5 +136,5 @@ export default function Navbar() {
                 </div>
             </DisclosurePanel>
         </Disclosure>
-    )
+    );
 }

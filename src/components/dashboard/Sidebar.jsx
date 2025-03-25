@@ -1,6 +1,6 @@
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import Image from 'next/image'
+import Image from "next/image"
 
 import {
     HomeIcon,
@@ -31,7 +31,6 @@ export function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
             <DialogBackdrop
                 className="fixed inset-0 bg-gray-900/80"
             />
-
             <div className="fixed inset-0 flex">
                 <DialogPanel
                     className="relative mr-16 flex w-full max-w-xs flex-1 flex-col bg-white"
@@ -54,7 +53,10 @@ export function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
                                 src="/assets/liqtrade-logo.png"
                                 width={150}
                                 height={50}
-                            />
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto"
+                                }} />
                         </div>
 
                         <nav className="flex flex-1 flex-col">
@@ -137,7 +139,7 @@ export function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
                 </DialogPanel>
             </div>
         </Dialog>
-    )
+    );
 }
 
 export function DesktopSidebar() {
@@ -151,7 +153,10 @@ export function DesktopSidebar() {
                             src="/assets/liqtrade-logo.png"
                             width={150}
                             height={50}
-                        />
+                            style={{
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
                     </div>
                 </div>
 
@@ -227,5 +232,5 @@ export function DesktopSidebar() {
                 </div>
             </div>
         </div>
-    )
+    );
 }

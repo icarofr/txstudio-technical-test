@@ -1,7 +1,7 @@
 import { userData } from '../../data/dashboardData'
 import { PencilIcon } from '@heroicons/react/24/solid'
 import RiskScore from './RiskScore'
-import Image from 'next/image'
+import Image from "next/image"
 
 export default function AccountSection() {
     return (
@@ -58,12 +58,14 @@ export default function AccountSection() {
                         <Image
                             src="/assets/coin.png"
                             alt="Currency"
-                            layout="fill"
-                            objectFit="contain"
-                        />
+                            fill
+                            sizes="100vw"
+                            style={{
+                                objectFit: "contain"
+                            }} />
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }

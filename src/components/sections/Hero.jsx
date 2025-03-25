@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/image";
 import Link from 'next/link';
 
 export default function Hero() {
@@ -53,20 +53,19 @@ export default function Hero() {
                     <div className="hidden md:block md:w-1/2"></div>
                 </div>
             </div>
-
             <div className="md:absolute md:top-0 md:right-0 md:h-full md:w-1/2">
                 <div className="relative h-[450px] w-full">
                     <Image
                         src="/assets/landing.png"
                         alt="Liqtrade application interface"
                         fill
-                        style={{
-                            objectFit: 'contain',
-                            objectPosition: 'center right'
-                        }}
                         priority
                         quality={100}
-                    />
+                        style={{
+                            objectFit: 'contain',
+                            objectPosition: 'center right',
+                            maxWidth: "100%",
+                        }} />
 
                     <div className="absolute -z-10 top-10 right-10 w-40 h-40 rounded-full bg-blue-100 opacity-50"></div>
                     <div className="absolute -z-10 bottom-20 left-10 w-32 h-32 rounded-full bg-blue-100 opacity-50"></div>
