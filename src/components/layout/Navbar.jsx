@@ -9,7 +9,6 @@ export default function Navbar() {
                 <div className="flex h-16 justify-between items-center">
                     <div className="flex items-center">
                         <div className="mr-2 -ml-2 flex items-center md:hidden">
-                            {/* Mobile menu button */}
                             <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:ring-2 focus:ring-indigo-500 focus:outline-hidden focus:ring-inset">
                                 <span className="absolute -inset-0.5" />
                                 <span className="sr-only">Open main menu</span>

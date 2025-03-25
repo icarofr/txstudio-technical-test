@@ -7,7 +7,6 @@ export default function Hero() {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col md:flex-row items-center pt-10 md:pt-20 pb-16 mt-24">
 
-                    {/* Left Content */}
                     <div className="pl-12 w-full md:w-1/2 md:pr-8 mb-10 md:mb-0">
                         <p className="text-xs text-blue-800 font-bold mb-2 uppercase tracking-wide">
                             FINANCEMENT PROFESSIONNEL À COURT TERME.
@@ -51,12 +50,10 @@ export default function Hero() {
                         </div>
                     </div>
 
-                    {/* Right side placeholder to maintain grid */}
                     <div className="hidden md:block md:w-1/2"></div>
                 </div>
             </div>
 
-            {/* Right Image with Coins - Using the original implementation */}
             <div className="md:absolute md:top-0 md:right-0 md:h-full md:w-1/2">
                 <div className="relative h-[450px] w-full">
                     <Image
@@ -71,7 +68,6 @@ export default function Hero() {
                         quality={100}
                     />
 
-                    {/* Background decorative elements */}
                     <div className="absolute -z-10 top-10 right-10 w-40 h-40 rounded-full bg-blue-100 opacity-50"></div>
                     <div className="absolute -z-10 bottom-20 left-10 w-32 h-32 rounded-full bg-blue-100 opacity-50"></div>
                 </div>

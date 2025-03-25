@@ -1,9 +1,7 @@
-// src/components/dashboard/Sidebar.jsx
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 
-// Import actual icon components
 import {
     HomeIcon,
     ArrowsRightLeftIcon,
@@ -15,7 +13,6 @@ import {
 import { avatarUrl } from '../../data/dashboardData'
 import { classNames } from '../../utils'
 
-// Navigation items that match the visual reference
 const navigationItems = [
     { name: 'Tableau de Bord', href: '#', icon: HomeIcon, current: true },
     { name: 'Mes transactions', href: '#', icon: ArrowsRightLeftIcon, current: false },

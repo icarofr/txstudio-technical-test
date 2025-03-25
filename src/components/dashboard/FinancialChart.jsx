@@ -13,7 +13,6 @@ import {
 } from 'chart.js';
 import FinancialTooltip from './FinancialTooltip';
 
-// Register Chart.js components
 Chart.register(
     CategoryScale,
     LinearScale,
@@ -31,7 +30,6 @@ export default function FinancialChart({ chartConfig }) {
     const chartInstance = useRef(null);
     const chartContainerRef = useRef(null);
 
-    // State for hover tooltip
     const [hoverTooltip, setHoverTooltip] = useState({
         show: false,
         x: 0,
@@ -40,24 +38,19 @@ export default function FinancialChart({ chartConfig }) {
         color: '',
     });
 
-    // Initialize chart
     useEffect(() => {
         if (chartRef.current) {
-            // Destroy previous chart instance if it exists
             if (chartInstance.current) {
                 chartInstance.current.destroy();
             }
 
-            // Create new chart
             const ctx = chartRef.current.getContext('2d');
             chartInstance.current = new Chart(ctx, chartConfig);
 
-            // Add vertical line at x=15
             const gradient = ctx.createLinearGradient(0, 0, 0, 400);
             gradient.addColorStop(0, 'rgba(209, 213, 219, 0.2)');
             gradient.addColorStop(1, 'rgba(209, 213, 219, 0)');
 
-            // Draw vertical line after chart is rendered
             setTimeout(() => {
                 if (chartInstance.current) {
                     const xPosition = chartInstance.current.scales.x.getPixelForValue(15);
@@ -84,7 +77,6 @@ export default function FinancialChart({ chartConfig }) {
         };
     }, [chartConfig]);
 
-    // Handle mouse movement over chart
     const handleMouseMove = (e) => {
         if (!chartInstance.current || !chartContainerRef.current) return;
 
@@ -92,11 +84,9 @@ export default function FinancialChart({ chartConfig }) {
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
 
-        // Get chart scales
         const xScale = chartInstance.current.scales.x;
         const yScale = chartInstance.current.scales.y;
 
-        // Find the closest data point
         const xValue = xScale.getValueForPixel(x);
         const xIndex = Math.round(xValue);
 
@@ -105,7 +95,6 @@ export default function FinancialChart({ chartConfig }) {
             let closestValue = null;
             let minDistance = Infinity;
 
-            // Find the closest dataset to the mouse position
             chartConfig.data.datasets.forEach(dataset => {
                 const dataValue = dataset.data[xIndex];
                 const dataYPixel = yScale.getPixelForValue(dataValue);
@@ -118,8 +107,7 @@ export default function FinancialChart({ chartConfig }) {
                 }
             });
 
-            if (closestDataset && minDistance < 30) { // Only show tooltip if mouse is close enough to a line
-                // Get the x pixel position for the data point
+            if (closestDataset && minDistance < 30) {
                 const xPixel = xScale.getValueForPixel(xIndex);
                 const yPixel = yScale.getPixelForValue(closestValue);
 
@@ -142,7 +130,6 @@ export default function FinancialChart({ chartConfig }) {
 
     return (
         <div className="flex flex-col">
-            {/* Chart container */}
             <div
                 ref={chartContainerRef}
                 className="relative h-56 w-full"
@@ -151,7 +138,6 @@ export default function FinancialChart({ chartConfig }) {
             >
                 <canvas ref={chartRef}></canvas>
 
-                {/* Hover tooltip */}
                 {hoverTooltip.show && (
                     <FinancialTooltip
                         x={hoverTooltip.x}
@@ -160,7 +146,6 @@ export default function FinancialChart({ chartConfig }) {
                     />
                 )}
 
-                {/* Hover point */}
                 {hoverTooltip.show && (
                     <div
                         className="absolute w-3 h-3 rounded-full border-2 border-white transform -translate-x-1.5 -translate-y-1.5"
@@ -175,7 +160,6 @@ export default function FinancialChart({ chartConfig }) {
                 )}
             </div>
 
-            {/* Legend */}
             <div className="flex gap-6 mt-4 px-2 mx-auto">
                 {chartConfig.data.datasets.map((dataset, i) => (
                     <div key={i} className="flex items-center">

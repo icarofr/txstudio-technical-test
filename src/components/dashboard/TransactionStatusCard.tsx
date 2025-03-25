@@ -14,7 +14,6 @@ export default function TransactionStatusCard() {
                     </span>
                 </div>
                 
-                {/* Progress bar for Prêt Société - green */}
                 <div className="w-full bg-gray-200 rounded-full h-2 grow">
                     <div className="bg-green-500 h-2 rounded-full" style={{ width: loanTypes.societe.progress }}></div>
                 </div>
@@ -27,7 +26,6 @@ export default function TransactionStatusCard() {
                     </span>
                 </div>
                 
-                {/* Progress bar for Prêt HotDogges - blue */}
                 <div className="w-full bg-gray-200 rounded-full h-2 grow">
                     <div className="bg-blue-900 h-2 rounded-full" style={{ width: loanTypes.hotDoggs.progress}}></div>
                 </div>

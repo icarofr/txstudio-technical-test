@@ -2,21 +2,16 @@ import { progressData } from '../../data/dashboardData';
 import { DocumentArrowDownIcon } from '@heroicons/react/24/outline';
 
 export default function TransactionProgressCard() {
-    // Calculate the circumference of the circle
     const radius = 16;
     const circumference = 2 * Math.PI * radius;
 
-    // Calculate stroke dash offsets
-    const greenOffset = 0;
     const yellowOffset = (progressData.openingAgreement / 100) * circumference;
     const blueOffset = yellowOffset + (progressData.requestAgreement / 100) * circumference;
 
-    // Colors from the financial chart config
-    const greenColor = "#22c55e";  // First Lorem Ipsum color
-    const cyanColor = "#22c1d6";   // Second Lorem Ipsum color
-    const orangeColor = "#f97316"; // Third Lorem Ipsum color
+    const greenColor = "#22c55e";
+    const cyanColor = "#22c1d6";
+    const orangeColor = "#f97316";
 
-    // Custom checkmark SVG path
     const checkmarkPath = "M3 6.5l2 2L9 4";
 
     return (
@@ -27,13 +22,10 @@ export default function TransactionProgressCard() {
             </div>
             <div className='grid grid-cols-2'>
                 <div className="flex justify-center mb-4 overflow-visible">
-                    {/* Circular progress chart using SVG */}
                     <div className="relative h-20 w-20 mt-6 overflow-visible -ml-3 grow-lg" style={{ transform: 'scale(1.2)' }}>
                         <svg viewBox="0 0 36 36" className="h-full w-full overflow-visible" style={{ transform: 'rotate(120deg)' }}>
-                            {/* Background circle */}
                             <circle cx="18" cy="18" r="16" fill="none" stroke="#E5E7EB" strokeWidth="6" />
 
-                            {/* Green segment */}
                             <circle
                                 cx="18" cy="18" r="16"
                                 fill="none"
@@ -44,7 +36,6 @@ export default function TransactionProgressCard() {
                                 transform="rotate(0 18 18)"
                             />
 
-                            {/* Orange segment */}
                             <circle
                                 cx="18" cy="18" r="16"
                                 fill="none"
@@ -55,7 +46,6 @@ export default function TransactionProgressCard() {
                                 transform="rotate(0 18 18)"
                             />
 
-                            {/* Cyan segment */}
                             <circle
                                 cx="18" cy="18" r="16"
                                 fill="none"
@@ -70,7 +60,6 @@ export default function TransactionProgressCard() {
                 </div>
 
                 <ul className='text-xs flex flex-col justify-center'>
-                    {/* First checkbox */}
                     <li className="flex items-center">
                         <div className="w-4 h-4 rounded flex-shrink-0 flex items-center justify-center mr-1.5" style={{ backgroundColor: greenColor }}>
                             <svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +70,6 @@ export default function TransactionProgressCard() {
                         <span className="text-[10px] text-gray-700">Accord ouverture</span>
                     </li>
 
-                    {/* Second checkbox */}
                     <li className="flex items-center mt-1.5">
                         <div className="w-4 h-4 rounded flex-shrink-0 flex items-center justify-center mr-1.5" style={{ backgroundColor: orangeColor }}>
                             <svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +80,6 @@ export default function TransactionProgressCard() {
                         <span className="text-[10px] text-gray-700">Accord demande</span>
                     </li>
 
-                    {/* Third checkbox */}
                     <li className="flex items-center mt-1.5">
                         <div className="w-4 h-4 rounded flex-shrink-0 flex items-center justify-center mr-1.5" style={{ backgroundColor: cyanColor }}>
                             <svg width="11" height="11" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"

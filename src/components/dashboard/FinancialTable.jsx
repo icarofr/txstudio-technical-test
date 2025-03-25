@@ -4,8 +4,7 @@ import { classNames } from "../../utils";
 export default function FinancialTable({ data }) {
     return (
         <div className="overflow-x-auto -mx-4 px-4">
-            <div className="min-w-[600px]"> {/* Set a minimum width to prevent squishing */}
-                {/* Table header */}
+            <div className="min-w-[600px]">
                 <div className="mt-4 grid grid-cols-6 text-[11px] font-bold text-indigo-800">
                     <div className="pl-3 py-2 col-span-1">Tenor</div>
                     <div className="px-3 py-2 col-span-1">Market Place</div>
@@ -21,7 +20,6 @@ export default function FinancialTable({ data }) {
                     <div className="px-3 py-2 col-span-1">Variation</div>
                 </div>
 
-                {/* Table rows */}
                 {data.map((row, index) => (
                     <div
                         key={index}

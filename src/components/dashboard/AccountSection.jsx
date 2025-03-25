@@ -8,7 +8,7 @@ export default function AccountSection() {
         <div className="mb-8">
             <h2 className="text-md font-semibold text-gray-900 mb-4">Mon compte</h2>
             <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-                {/* User info card */}
+
                 <div className="bg-white p-4 rounded-lg shadow-sm relative h-full flex flex-col justify-end">
                     <div className="absolute top-4 right-4">
                         <button className="bg-gray-100 p-1.5 rounded-md">
@@ -22,7 +22,6 @@ export default function AccountSection() {
                     </div>
                 </div>
 
-                {/* Segment card */}
                 <div className="bg-white p-5 rounded-lg shadow-sm flex flex-col">
                     <p className="text-xs text-gray-500">Segment</p>
                     <div className="flex-grow flex justify-end items-end">
@@ -30,7 +29,6 @@ export default function AccountSection() {
                     </div>
                 </div>
 
-                {/* Risk evaluation card */}
                 <div className="bg-white p-5 rounded-lg shadow-sm flex flex-col">
                     <div>
                         <p className="text-xs text-gray-500">Évaluation des risques</p>
@@ -41,7 +39,6 @@ export default function AccountSection() {
                     </div>
                 </div>
 
-                {/* Risk score card */}
                 <div className="bg-white p-5 rounded-lg shadow-sm flex flex-col">
                     <div className="mb-auto">
                         <p className="text-xs text-gray-500">Score risque</p>
@@ -52,7 +49,6 @@ export default function AccountSection() {
                     </div>
                 </div>
 
-                {/* Amount card */}
                 <div className="bg-white pt-5 pl-5 pr-1 rounded-lg shadow-sm flex flex-col">
                     <p className="text-xs text-gray-500">Montant dernière transaction</p>
                     <div className="flex-grow flex justify-between">

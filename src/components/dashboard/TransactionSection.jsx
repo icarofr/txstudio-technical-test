@@ -14,7 +14,6 @@ export default function TransactionSection() {
         <div>
             <h2 className="text-md font-semibold text-gray-900 mb-4">Transactions</h2>
 
-            {/* Transaction tabs - responsive width and prevent text wrapping */}
             <div className="flex mb-4 rounded-md bg-white max-w-md">
                 <button
                     className={classNames(
@@ -51,9 +50,7 @@ export default function TransactionSection() {
                 </button>
             </div>
 
-            {/* Transaction status cards - improved breakpoints for better display */}
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 mb-6">
-                {/* First row on medium screens */}
                 <div className="sm:col-span-1 xl:col-span-1">
                     <TransactionStatusCard />
                 </div>
@@ -61,7 +58,6 @@ export default function TransactionSection() {
                     <TransactionAmountCard />
                 </div>
 
-                {/* Second row on medium screens */}
                 <div className="sm:col-span-1 xl:col-span-1">
                     <TransactionProgressCard />
                 </div>
@@ -70,7 +66,6 @@ export default function TransactionSection() {
                 </div>
             </div>
 
-            {/* First Transaction Table */}
             <div className="mb-6">
                 <TransactionTable
                     headers={loanOverviewHeaders}
@@ -79,7 +74,6 @@ export default function TransactionSection() {
                 />
             </div>
 
-            {/* Second Transaction Table */}
             <TransactionTable
                 headers={loanDetailsHeaders}
                 data={loanDetailsData}

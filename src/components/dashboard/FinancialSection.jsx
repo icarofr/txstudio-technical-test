@@ -13,21 +13,17 @@ export default function FinancialSection() {
             <h2 className="text-md font-semibold text-gray-900 mb-4">Informations financières</h2>
 
             <div className="grid grid-cols-1 xl:grid-cols-5 gap-3">
-                {/* Chart section - narrower (2/5) on desktop only */}
                 <div className="bg-white px-4 pt-4 pb-8 rounded-lg shadow-sm xl:col-span-2">
                     <FinancialChart chartConfig={financialChartConfig} />
                 </div>
 
-                {/* Financial data table - wider (3/5) on desktop only */}
                 <div className="bg-white px-4 pb-8 shadow-sm rounded-lg xl:col-span-3">
-                    {/* Tabs */}
                     <FinancialTabs
                         tabs={financialTabs}
                         selectedTab={selectedTab}
                         onTabChange={setSelectedTab}
                     />
 
-                    {/* Table */}
                     <FinancialTable data={financialTableData} />
                 </div>
             </div>

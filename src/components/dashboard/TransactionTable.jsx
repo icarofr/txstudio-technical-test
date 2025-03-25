@@ -3,7 +3,6 @@ import React from 'react';
 import { CheckCircleIcon } from '@heroicons/react/24/outline';
 
 export default function TransactionTable({ headers, data, type }) {
-    // Helper function to style values based on content
     const getValueStyle = (value) => {
         if (value === 'Validé') {
             return 'text-green-500 font-medium';
@@ -18,21 +17,17 @@ export default function TransactionTable({ headers, data, type }) {
             <div className="overflow-x-auto">
                 <table className="min-w-full table-fixed">
                     <colgroup>
-                        {/* First column for loan type */}
                         <col className="w-24" />
 
-                        {/* Dynamic columns with equal width */}
                         {headers.map((_, index) => (
                             <col key={index} className="w-32" />
                         ))}
                     </colgroup>
                     <thead className="bg-white">
                         <tr>
-                            {/* First column is always loan type */}
                             <th className="py-3 px-4 text-left">
                             </th>
 
-                            {/* Dynamic headers with text-wrap */}
                             {headers.map((header, index) => (
                                 <th
                                     key={index}
@@ -50,7 +45,6 @@ export default function TransactionTable({ headers, data, type }) {
                                     {row.type}
                                 </td>
 
-                                {/* Dynamic data cells */}
                                 {headers.map((header, cellIndex) => (
                                     <td
                                         key={cellIndex}

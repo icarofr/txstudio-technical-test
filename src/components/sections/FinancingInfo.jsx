@@ -5,7 +5,7 @@ export default function FinancingInfo() {
     return (
         <section className="w-full bg-gray-100 py-16">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                {/* Mobile Nav - Only visible on mobile */}
+
                 <div className="flex md:hidden mb-8 space-x-6 justify-center">
                     <Link href="#" className="flex items-center text-green-500 font-medium">
                         Prêts
@@ -18,7 +18,6 @@ export default function FinancingInfo() {
                 </div>
 
                 <div className="flex flex-col md:flex-row">
-                    {/* Left Side - Links (desktop only) */}
                     <div className="hidden md:block w-full md:w-1/3 pl-12 pr-0 md:pr-12 mb-10 md:mb-0">
                         <div className="mb-8">
                             <Link href="#" className="flex items-center text-green-500 font-medium">
@@ -35,7 +34,6 @@ export default function FinancingInfo() {
                         </div>
                     </div>
 
-                    {/* Right Side - Content */}
                     <div className="w-full text-sm/3.5 md:w-7/12 px-8 md:px-0">
                         <p className="text-gray-800 mb-4">
                             Des taux compétitifs en quelques clics.

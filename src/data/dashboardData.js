@@ -1,4 +1,3 @@
-// Navigation items
 export const navigationItems = [
     { name: 'Tableau de bord', href: '#', icon: 'HomeIcon', current: true },
     { name: 'Équipe', href: '#', icon: 'UserGroupIcon', current: false },
@@ -11,7 +10,6 @@ export const secondaryNavigation = [
     { name: 'Paiements', href: '#', icon: 'CreditCardIcon', current: false },
 ]
 
-// User data
 export const userData = {
     name: 'Paul Dumartin',
     company: 'DUMARTIN SARL',
@@ -72,7 +70,7 @@ export const financialChartConfig = {
                 display: false,
             },
             tooltip: {
-                enabled: false, // Disable default tooltip
+                enabled: false,
             },
         },
         scales: {
@@ -117,22 +115,21 @@ export const financialChartConfig = {
         },
         elements: {
             point: {
-                radius: 0, // Hide all points by default
-                hoverRadius: 0, // No hover radius for default points
+                radius: 0,
+                hoverRadius: 0,
             },
             line: {
                 borderWidth: 2,
             }
         },
         hover: {
-            mode: null, // Disable default hover mode
+            mode: null,
         },
         animation: false,
     }
 };
 
 
-// Financial tabs
 export const financialTabs = [
     { name: 'Euribor1w', current: true },
     { name: 'Euribor2w', current: false },
@@ -141,7 +138,6 @@ export const financialTabs = [
 ]
 
 
-// Financial table data
 export const financialTableData = [
     { tenor: '7 DAYS', marketPlace: '0.0000', marketRiskFreeDate: '0', marketRiskFreePremium: '0.0000', change: '0.0000', variation: '1' },
     { tenor: '30 DAYS', marketPlace: '0.0000', marketRiskFreeDate: '0', marketRiskFreePremium: '0.0000', change: '0.0000', variation: '9' },
@@ -150,7 +146,6 @@ export const financialTableData = [
     { tenor: '360 DAYS', marketPlace: '0.004400', marketRiskFreeDate: '0.004400', marketRiskFreePremium: '0.004400', change: '0.004400', variation: '0.004400' },
 ]
 
-// Transaction data
 export const transactionData = [
     {
         contract: "CONT-2023-001",
