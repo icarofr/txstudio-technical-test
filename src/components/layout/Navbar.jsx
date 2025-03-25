@@ -1,6 +1,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from "next/image"
+import Link from 'next/link';
 
 export default function Navbar() {
     return (
@@ -17,15 +18,18 @@ export default function Navbar() {
                             </DisclosureButton>
                         </div>
                         <div className="flex shrink-0 items-center">
-                            <Image
-                                alt="LiqTrade"
-                                src="/assets/liqtrade-logo.png"
-                                width={150}
-                                height={50}
-                                style={{
-                                    maxWidth: "100%",
-                                    height: "auto"
-                                }} />
+                            <Link href="/">
+                                <Image
+                                    alt="LiqTrade"
+                                    className="cursor-pointer"
+                                    src="/assets/liqtrade-logo.png"
+                                    width={150}
+                                    height={50}
+                                    style={{
+                                        maxWidth: "100%",
+                                        height: "auto"
+                                    }} />
+                            </Link>
                         </div>
                         <div className="hidden md:ml-10 md:flex md:space-x-8">
                             <a
@@ -65,16 +69,18 @@ export default function Navbar() {
                             <div className="flex ml-6 space-x-2">
                                 <button
                                     type="button"
-                                    className="rounded-lg border border-green-400 bg-white px-7 py-1.5 text-sm font-medium text-green-500 hover:bg-green-50"
+                                    className="cursor-pointer rounded-lg border border-green-400 bg-white px-7 py-1.5 text-sm font-medium text-green-500 hover:bg-green-50"
                                 >
                                     S'inscrire
                                 </button>
-                                <button
-                                    type="button"
-                                    className="rounded-lg bg-green-500 px-7 py-1.5 text-sm font-medium text-white hover:bg-green-600"
-                                >
-                                    Se connecter
-                                </button>
+                                <Link href="/dashboard">
+                                    <button
+                                        type="button"
+                                        className="cursor-pointer rounded-lg bg-green-500 px-7 py-1.5 text-sm font-medium text-white hover:bg-green-600"
+                                    >
+                                        Se connecter
+                                    </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -122,16 +128,18 @@ export default function Navbar() {
                     <div className="flex justify-center space-x-2 px-4">
                         <button
                             type="button"
-                            className="rounded-md border border-green-400 bg-white px-5 py-1.5 text-sm font-medium text-green-500 hover:bg-green-50"
+                            className="cursor-pointer rounded-md border border-green-400 bg-white px-5 py-1.5 text-sm font-medium text-green-500 hover:bg-green-50"
                         >
                             S'inscrire
                         </button>
-                        <button
-                            type="button"
-                            className="rounded-md bg-green-500 px-5 py-1.5 text-sm font-medium text-white hover:bg-green-600"
-                        >
-                            Se connecter
-                        </button>
+                        <Link href="/dashboard">
+                            <button
+                                type="button"
+                                className="cursor-pointer rounded-md bg-green-500 px-5 py-1.5 text-sm font-medium text-white hover:bg-green-600"
+                            >
+                                Se connecter
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </DisclosurePanel>

@@ -1,6 +1,7 @@
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import Image from "next/image"
+import Link from 'next/link';
 
 import {
     HomeIcon,
@@ -48,15 +49,18 @@ export function MobileSidebar({ sidebarOpen, setSidebarOpen }) {
 
                     <div className="flex flex-col gap-y-5 overflow-y-auto px-6 pb-2">
                         <div className="flex h-16 shrink-0 items-center justify-center pt-8 pb-6">
-                            <Image
-                                alt="LiqTrade"
-                                src="/assets/liqtrade-logo.png"
-                                width={150}
-                                height={50}
-                                style={{
-                                    maxWidth: "100%",
-                                    height: "auto"
-                                }} />
+                            <Link href="/">
+                                <Image
+                                    alt="LiqTrade"
+                                    className="cursor-pointer"
+                                    src="/assets/liqtrade-logo.png"
+                                    width={150}
+                                    height={50}
+                                    style={{
+                                        maxWidth: "100%",
+                                        height: "auto"
+                                    }} />
+                            </Link>
                         </div>
 
                         <nav className="flex flex-1 flex-col">
@@ -148,15 +152,18 @@ export function DesktopSidebar() {
             <div className="flex h-full flex-col bg-white">
                 <div className="flex h-16 shrink-0 items-center justify-center pt-8 pb-6">
                     <div className="flex items-center mt-8">
-                        <Image
-                            alt="LiqTrade"
-                            src="/assets/liqtrade-logo.png"
-                            width={150}
-                            height={50}
-                            style={{
-                                maxWidth: "100%",
-                                height: "auto"
-                            }} />
+                        <Link href="/">
+                            <Image
+                                alt="LiqTrade"
+                                className="cursor-pointer"
+                                src="/assets/liqtrade-logo.png"
+                                width={150}
+                                height={50}
+                                style={{
+                                    maxWidth: "100%",
+                                    height: "auto"
+                                }} />
+                        </Link>
                     </div>
                 </div>
 
