@@ -36,7 +36,7 @@ export default function FinancingInfo() {
                     </div>
 
                     {/* Right Side - Content */}
-                    <div className="w-full text-sm/3.5 md:w-7/12">
+                    <div className="w-full text-sm/3.5 md:w-7/12 px-8 md:px-0">
                         <p className="text-gray-800 mb-4">
                             Des taux compétitifs en quelques clics.
                         </p>
