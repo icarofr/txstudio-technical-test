@@ -31,7 +31,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### TypeScript Considerations
 
-For this integration test, TypeScript was primarily used for configuration files and some component definitions, while most UI components were built with JSX for rapid development. However, I want to emphasize that **full TypeScript integration is recommended** for production to ensure type safety, maintainability, and better developer experience.
+For this integration test, JavaScript and JSX were primarily used for rapid development and prototyping. However, I want to emphasize that **full TypeScript integration is recommended** for production to ensure type safety, maintainability, and better developer experience.
 
 ### Library Choices
 
@@ -80,4 +80,4 @@ This project can be deployed on Vercel for optimal Next.js compatibility, or fol
 
 ---
 
-Thank you for the opportunity to demonstrate my frontend development skills. I look forward to discussing this implementation further.
+Thank you for the opportunity to demonstrate my frontend development skills.
