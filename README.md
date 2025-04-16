@@ -1,5 +1,9 @@
 # LiqTrade - Technical Test for TXStudio
 
+## ⚠️ Note on TXStudio
+
+# This project was completed as part of a technical assessment requested by TXStudio. Based on the nature and scope of the task, concerns were raised about the use of unpaid work under the pretext of recruitment. The repository remains public as an example of my frontend skills. Candidates are encouraged to evaluate carefully when engaging with companies requesting complex unpaid assessments.
+
 LiqTrade is a financial services interface built as part of a technical test for TXStudio, showcasing responsive UI development and data visualization using Next.js and Tailwind CSS.
 
 ## Project Overview
@@ -68,6 +72,7 @@ For this integration test, JavaScript and JSX were primarily used for rapid deve
 ## Future Improvements
 
 Potential future improvements could include:
+
 - Complete TypeScript integration for all components
 - Unit and integration tests using Jest and React Testing Library
 - State management with React Context or Redux for more complex interactions
